@@ -1,0 +1,2 @@
+<?php echo link_tag('assets/AdminLTE/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css'); ?>
+<?php echo link_tag('assets/AdminLTE/plugins/datatables-responsive/css/responsive.bootstrap4.min.css'); ?>
