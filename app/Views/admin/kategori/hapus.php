@@ -18,7 +18,9 @@
       </div>
       <div class="modal-footer float-right">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <a href="<?php echo base_url('admin/kategori/hapus/' . $kategori['kategori_id']); ?>" class="btn btn-danger">
+          <i class="fas fa-trash"></i> Ya, Hapus data ini
+        </a>
       </div>
     </div>
     <!-- /.modal-content -->

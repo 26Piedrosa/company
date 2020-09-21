@@ -75,7 +75,7 @@ class Kategori extends BaseController
 				$this->kategoriModel->insert($data);
 
 				// MEMBUAT PESAN SUKSES 
-				session()->setFlashdata('success', 'Data berhasil disimpan');
+				session()->setFlashdata('success', 'Data berhasil di simpan');
 
 				// MENGALIHKAN KE HALAMAN INDEX KATEGORI
 				return redirect()->to(base_url('admin/kategori'));
@@ -146,7 +146,7 @@ class Kategori extends BaseController
 				$this->kategoriModel->update($kategori_id, $data);
 
 				// MEMBUAT PESAN SUKSES
-				session()->setFlashdata('success', 'Data berhasil disimpan');
+				session()->setFlashdata('success', 'Data berhasil di simpan');
 
 				// MENGALIHKAN KE HALAMAN INDEX KATEGORI
 				return redirect()->to(base_url('admin/kategori'));
@@ -164,6 +164,26 @@ class Kategori extends BaseController
 	// HAPUS KATEGORI
 	public function hapus($kategori_id=null)
 	{
-		# code...
+		$kategori = $this->kategoriModel->find($kategori_id);
+
+		if(!empty($kategori))
+		{
+			// PROSES HAPUS DATA DI DATABASE
+			$this->kategoriModel->delete($kategori_id);
+
+			// MEMBUAT PESAN SUKSES
+			session()->setFlashdata('success', 'Data berhasil di hapus');
+
+			// MENGALIHKAN KE HALAMAN INDEX KATEGORI
+			return redirect()->to(base_url('admin/kategori'));
+		}
+		else
+		{
+			// MEMBUAT PESAN ERRORS HAPUS
+			session()->setFlashdata('danger', 'Maaf, data tidak tersedia');
+
+			// MENGALIHKAN KE HALAMAN INDEX KATEGORI
+			return redirect()->to(base_url('admin/kategori'));
+		}
 	}
 }

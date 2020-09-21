@@ -56,6 +56,12 @@
           </div>
         <?php } ?>
 
+        <?php if(session()->getFlashdata('danger')){ ?>
+          <div class="alert alert-danger">
+            <?php echo session()->getFlashdata('danger'); ?>
+          </div>
+        <?php } ?>
+
         <!-- Render Section Content -->
         <?php $this->renderSection('content') ?>
         <!-- Ends Render Section Content -->
