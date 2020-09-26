@@ -18,7 +18,7 @@ The user guide corresponding to this version of the framework can be found
 
 1. Download file master zip project.
 2. Extract file, then rename project folder.
-3. Run composer update command `composer update` on project directory.
+3. Run `composer update` on project directory.
 4. Copy `env` to `.env` and tailor for your app, specifically the baseURL and any database settings.
 
 ## Server Requirements
