@@ -1,4 +1,4 @@
-# Company Profile with CodeIgniter 4 &amp; AdminLTE3
+# Company Profile with CodeIgniter 4 &amp; AdminLTE 3
 
 ## What is CodeIgniter?
 
