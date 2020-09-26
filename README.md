@@ -1,4 +1,4 @@
-# Company Profile Application with CodeIgniter 4 
+# Company Profile with CodeIgniter 4 
 
 ## What is CodeIgniter?
 
