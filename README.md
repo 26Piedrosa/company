@@ -1,4 +1,4 @@
-# Company Profile with CodeIgniter 4 
+# Company Profile with CodeIgniter 4 &amp; AdminLTE3
 
 ## What is CodeIgniter?
 
@@ -14,7 +14,12 @@ More information about the plans for version 4 can be found in [the announcement
 The user guide corresponding to this version of the framework can be found
 [here](https://codeigniter4.github.io/userguide/). 
 
-## Installation & updates
+## What is AdminLTE?
+AdminLTE is a fully responsive administration template. Based on Bootstrap 4.4 framework and also the JS/jQuery plugin. Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops.
+
+Preview on [AdminLTE.io](https://adminlte.io/themes/v3)
+
+## Installation
 
 1. Download file master zip project.
 2. Extract file, then rename project folder.
