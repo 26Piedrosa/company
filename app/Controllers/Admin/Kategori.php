@@ -68,7 +68,9 @@ class Kategori extends BaseController
 				$data = [
 					'nama_kategori'		=> $this->request->getPost('nama_kategori'),
 					'slug_kategori'		=> url_title($this->request->getPost('nama_kategori'), '-', TRUE),
-					'status_kategori'	=> $this->request->getPost('status_kategori')
+					'status_kategori'	=> $this->request->getPost('status_kategori'),
+					'created_by'		=> NULL,
+					'created_at'		=> $this->sTamp()
 				];
 
 				// PROSES SIMPAN DATA KE DATABASE
@@ -90,7 +92,7 @@ class Kategori extends BaseController
 	}
 
 	// EDIT KATEGORI
-	public function edit($kategori_id=null)
+	public function edit($kategori_id = null)
 	{
 		// MENGAMBIL DATA KATEGORI BERDASARKAN PARAMETER $KATEGORI_ID
 		$kategori = $this->kategoriModel->find($kategori_id);
@@ -139,7 +141,9 @@ class Kategori extends BaseController
 				$data = [
 					'nama_kategori'		=> $this->request->getPost('nama_kategori'),
 					'slug_kategori'		=> url_title($this->request->getPost('nama_kategori'), '-', TRUE),
-					'status_kategori'	=> $this->request->getPost('status_kategori')
+					'status_kategori'	=> $this->request->getPost('status_kategori'),
+					'updated_by'		=> NULL,
+					'updated_at'		=> $this->sTamp()
 				];
 
 				// PROSES UPDATE DATA KE DATABASE
@@ -162,7 +166,7 @@ class Kategori extends BaseController
 	}
 
 	// HAPUS KATEGORI
-	public function hapus($kategori_id=null)
+	public function hapus($kategori_id = null)
 	{
 		$kategori = $this->kategoriModel->find($kategori_id);
 

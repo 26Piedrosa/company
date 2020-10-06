@@ -32,6 +32,10 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+// $routes->get('/admin/berita', 'Admin\Konten::index');
+// $routes->get('/admin/berita/tambah', 'Admin\Konten::tambah');
+// $routes->post('/admin/berita/tambah', 'Admin\Konten::tambah');
+
 $routes->resource('api/kategori', ['controller' => 'Api\kategori']);
 
 /**

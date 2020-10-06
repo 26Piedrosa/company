@@ -15,6 +15,7 @@ namespace App\Controllers;
  */
 
 use CodeIgniter\Controller;
+use CodeIgniter\I18n\Time;
 
 class BaseController extends Controller
 {
@@ -26,7 +27,7 @@ class BaseController extends Controller
 	 *
 	 * @var array
 	 */
-	protected $helpers = ['url', 'form', 'html'];
+	protected $helpers = ['url', 'form', 'html', 'text', 'filesystem'];
 
 	/**
 	 * Constructor.
@@ -41,6 +42,12 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
+	}
+
+	public function sTamp()
+	{
+		$dateTime = new Time();
+		return $dateTime->toDateTimeString();
 	}
 
 }

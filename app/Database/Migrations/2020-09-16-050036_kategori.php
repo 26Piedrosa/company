@@ -16,15 +16,45 @@ class Kategori extends Migration
 			'nama_kategori'	=> [
 				'type'				=> 'VARCHAR',
 				'constraint'		=> '100',
+                'null'           	=> true,
 			],
 			'slug_kategori'	=> [
 				'type'				=> 'VARCHAR',
-				'constraint'		=> '255',
+				'constraint'		=> '150',
+                'null'           	=> true,
 			],
 			'status_kategori' => [
-				'type'				=> 'ENUM("Aktif", "Nonaktif")',
-				'default'			=> 'Aktif',
+				'type'				=> 'ENUM',
+				'constraint'		=> ['Active', 'Inactive'],
+				'default'			=> 'Active',
 				'null'				=> false,
+			],
+			'created_by'	=> [
+				'type'				=> 'VARCHAR',
+				'constraint'		=> '255',
+                'null'           	=> true,
+			],
+			'updated_by'	=> [
+				'type'				=> 'VARCHAR',
+				'constraint'		=> '255',
+                'null'           	=> true,
+			],
+			'deleted_by'	=> [
+				'type'				=> 'VARCHAR',
+				'constraint'		=> '255',
+                'null'           	=> true,
+			],
+			'created_at'	=> [
+				'type'				=> 'DATETIME',
+                'null'           	=> true,
+			],
+			'updated_at'	=> [
+				'type'				=> 'DATETIME',
+                'null'           	=> true,
+			],
+			'deleted_at'	=> [
+				'type'				=> 'DATETIME',
+                'null'           	=> true,
 			],
 		]);
 		$this->forge->addKey('kategori_id', true);

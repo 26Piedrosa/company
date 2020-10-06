@@ -9,4 +9,11 @@ class Home extends BaseController
 
 	//--------------------------------------------------------------------
 
+	public function test()
+	{
+		$db = ENVIRONMENT;
+		// $db = \CodeIgniter\Database\Config::getConnections();
+		dd($db);
+	}
+
 }

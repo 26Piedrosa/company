@@ -31,7 +31,7 @@
       </div> -->
 
       <?php $uri = service('uri'); ?>
-      <?php $konten = $uri->getSegment(2) == 'kategori' || $uri->getSegment(2) == 'berita'; ?>
+      <?php $konten = $uri->getSegment(2) == 'kategori' || $uri->getSegment(2) == 'konten'; ?>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -55,10 +55,11 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              <?php $konten = $uri->getSegment(2) == 'konten'; ?>
               <li class="nav-item">
-                <a href="<?php echo base_url('admin/berita'); ?>" class="nav-link">
+                <a href="<?php echo base_url('admin/konten'); ?>" class="nav-link <?php echo $konten ? 'active':'' ?>">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Berita</p>
+                  <p>Konten</p>
                 </a>
               </li>
 

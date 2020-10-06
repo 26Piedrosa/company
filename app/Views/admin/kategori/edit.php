@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
           <label for="status_kategori">Status</label>
-          <?php echo form_dropdown('status_kategori', ['Aktif' => 'Aktif', 'Nonaktif' => 'Nonaktif'], $kategori['status_kategori'], 'class="form-control"'); ?>
+          <?php echo form_dropdown('status_kategori', ['Active' => 'Active', 'Inactive' => 'Inactive'], $kategori['status_kategori'], 'class="form-control"'); ?>
         </div>
         <div class="form-group">
           <button type="submit" name="submit" class="btn btn-success">
